@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+int addition(int a, int b)
+{
+    return a + b;
+}
+int subtraction(int a, int b)
+{
+    return a - b;
+}
+int multiplication(int a, int b)
+{
+    return a * b;
+}
+int division(int a, int b)
+{
+    return a / b;
+}
+int percentage(int a, int b)
+{
+    return a % b;
+}
+int main(void)
+{
+    while (1)
+    {
+        int a, b, c, result;
+        printf("Enter Choice:");
+        scanf("%d", &a);
+        if (a > 0 && a <= 5)
+        {
+            printf("Give 2 input:");
+            scanf("%d %d", &b, &c);
+            if (a == 1)
+            {
+                result = addition(b, c);
+            }
+            else if (a == 2)
+            {
+                result = subtraction(b, c);
+            }
+            else if (a == 3)
+            {
+                result = multiplication(b, c);
+            }
+            else if (a == 4)
+            {
+                result = division(b, c);
+            }
+            else if (a == 5)
+            {
+                result = percentage(b, c);
+            }
+            printf("%d\n", result);
+        }
+        else
+        {
+            break;
+        }
+    }
+}
